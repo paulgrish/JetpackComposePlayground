@@ -78,7 +78,7 @@ fun DeclarativeComponentsScreen() {
                 
                 // После реализации заданий 1-4, добавьте ваши компоненты здесь:
                 Greeting("Мир")
-                // Greeting("Студент", isHighlighted = true) 
+                Greeting("Студент", isHighlighted = true)
                 
                 // Пример использования:
                 Text(
@@ -91,15 +91,15 @@ fun DeclarativeComponentsScreen() {
 }
 
 @Composable
-fun Greeting(name: String) {
+fun Greeting(name: String, isHighlighted: Boolean = false) {
     Text(
         text = name,
         modifier = Modifier
             .padding(16.dp)
             .background(Color.Gray)
             .padding(8.dp)
-            .fillMaxWidth()
-//        color = if (isHighlighted) Color.Red else Color.Black
+            .fillMaxWidth(),
+        color = if (isHighlighted) Color.Yellow else Color.Black
     )
 }
 
@@ -112,7 +112,7 @@ fun GreetingPreview1() {
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview2() {
-    Greeting("Composable")
+    Greeting("Composable", true)
 }
 
 @Preview(showBackground = true)
