@@ -1,6 +1,6 @@
 [versions]
 # Плагины
-androidGradlePlugin = "8.9.2"
+androidGradlePlugin = "8.13.2"
 kotlinVersion = "2.0.21"
 kotlinComposeCompiler = "1.5.3"
 
