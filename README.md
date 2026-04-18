@@ -11,6 +11,12 @@
 ### JCP-01: Введение в декларативную верстку
 Базовые компоненты, модификаторы, списки
 
+1. Файл: DeclarativeComponentsScreen.kt
+2. Файл: ModifiersExampleScreen.kt
+3. Файл: BasicElementsScreen.kt
+4. Файл: SimpleListScreen.kt
+5. Файл: SimpleStateScreen.kt
+
 ### JCP-02: Работа с состоянием  
 Кнопки, формы, валидация, таймеры
 
