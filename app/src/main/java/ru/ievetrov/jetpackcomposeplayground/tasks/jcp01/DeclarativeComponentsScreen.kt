@@ -3,6 +3,7 @@ package ru.ievetrov.jetpackcomposeplayground.tasks.jcp01
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
@@ -76,7 +77,7 @@ fun DeclarativeComponentsScreen() {
                 )
                 
                 // После реализации заданий 1-4, добавьте ваши компоненты здесь:
-                // Greeting("Мир") 
+                Greeting("Мир")
                 // Greeting("Студент", isHighlighted = true) 
                 
                 // Пример использования:
@@ -87,6 +88,31 @@ fun DeclarativeComponentsScreen() {
             }
         }
     }
+}
+
+@Composable
+fun Greeting(name: String) {
+    Text(
+        text = name,
+        modifier = Modifier
+            .padding(16.dp)
+            .background(Color.Gray)
+            .padding(8.dp)
+            .fillMaxWidth()
+//        color = if (isHighlighted) Color.Red else Color.Black
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+fun GreetingPreview1() {
+    Greeting("Paulgri")
+}
+
+@Preview(showBackground = true)
+@Composable
+fun GreetingPreview2() {
+    Greeting("Composable")
 }
 
 @Preview(showBackground = true)
