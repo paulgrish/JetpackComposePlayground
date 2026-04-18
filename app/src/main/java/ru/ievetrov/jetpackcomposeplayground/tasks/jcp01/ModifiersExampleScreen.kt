@@ -14,6 +14,10 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
@@ -34,6 +38,9 @@ import ru.ievetrov.jetpackcomposeplayground.ui.theme.JetpackComposePlaygroundThe
 
 @Composable
 fun ModifiersExampleScreen() {
+
+    var count: Int by remember { mutableStateOf(0) }
+
     JetpackComposePlaygroundTheme {
         Surface(
             modifier = Modifier.padding(16.dp),
@@ -82,19 +89,21 @@ fun ModifiersExampleScreen() {
                         .background(Color.Cyan)
                         .padding(8.dp)
                 )
-                
+
                 Text(
                     "Это мой текст",
                     style = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier
                         .padding(16.dp)
+                        .border(2.dp, Color.Blue, RoundedCornerShape(8.dp))
+                        .background(Color.Cyan)
                         .clip(RoundedCornerShape(8.dp))
-                        .border(2.dp, Color.Blue)
-                        .padding(16.dp)
-                        .clickable() {
-
+                        .clickable {
+                            count++
                         }
+                        .padding(16.dp)
                 )
+                Text(count.toString())
             }
         }
     }
