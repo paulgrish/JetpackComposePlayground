@@ -75,7 +75,25 @@ fun ModifiersExampleScreen() {
                 
                 Text(
                     "Здесь будут ваши примеры модификаторов",
-                    style = MaterialTheme.typography.bodyMedium
+                    style = MaterialTheme.typography.bodyMedium,
+                    modifier = Modifier
+                        .size(200.dp)
+                        .padding(16.dp)
+                        .background(Color.Cyan)
+                        .padding(8.dp)
+                )
+                
+                Text(
+                    "Это мой текст",
+                    style = MaterialTheme.typography.bodyMedium,
+                    modifier = Modifier
+                        .padding(16.dp)
+                        .clip(RoundedCornerShape(8.dp))
+                        .border(2.dp, Color.Blue)
+                        .padding(16.dp)
+                        .clickable() {
+
+                        }
                 )
             }
         }
